@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://chg842wl70kuj"]
+
+[ext_resource type="Texture2D" uid="uid://cjajs1keuw0k5" path="res://bee.png" id="1_osgje"]
+[ext_resource type="Script" path="res://bee.gd" id="1_x7v71"]
+[ext_resource type="Script" path="res://FiniteStateMachine.gd" id="2_5tv82"]
+[ext_resource type="Script" path="res://Idle.gd" id="4_nist3"]
+[ext_resource type="Script" path="res://Follow.gd" id="5_m07gg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4px36"]
+atlas = ExtResource("1_osgje")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0edlo"]
+atlas = ExtResource("1_osgje")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcbeo"]
+atlas = ExtResource("1_osgje")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iwga"]
+atlas = ExtResource("1_osgje")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6bqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4px36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0edlo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcbeo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iwga")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tjvwe"]
+radius = 7.0
+
+[node name="Bee" type="CharacterBody2D"]
+position = Vector2(0, 1)
+scale = Vector2(1, 1.00467)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_x7v71")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n6bqy")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.851362
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tjvwe")
+
+[node name="debug" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -33.842
+offset_right = 23.0
+offset_bottom = -10.842
+scale = Vector2(1.06982, 0.672757)
+text = "debug"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FiniteStateMachine" type="Node2D" parent="."]
+script = ExtResource("2_5tv82")
+
+[node name="Idle" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("4_nist3")
+
+[node name="Follow" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("5_m07gg")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(1, 148.308)
+collision_mask = 5

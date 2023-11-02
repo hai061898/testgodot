@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698940430
+bee.gd::GDScript::-1::1698940296::0::1::::<>CharacterBody2D<>::
+bee.png::CompressedTexture2D::5405120938618190150::1698935119::1698935119::1::::<><>::
+bee.tscn::PackedScene::5278606440821021057::1698940296::0::1::::<><>::uid://cjajs1keuw0k5::::res://bee.png<>res://bee.gd<>res://FiniteStateMachine.gd<>res://Idle.gd<>res://Follow.gd
+FiniteStateMachine.gd::GDScript::-1::1698935799::0::1::::FiniteStateMachine<>Node2D<>::
+Follow.gd::GDScript::-1::1698937682::0::1::::FollowState<>State<>::
+icon.svg::CompressedTexture2D::7758769441019508221::1698934796::1698934801::1::::<><>::
+Idle.gd::GDScript::-1::1698937880::0::1::::IdleState<>State<>::
+player.gd::GDScript::-1::1698936036::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::5357403983223842708::1698940296::0::1::::<><>::uid://disn2f10c62kf::::res://icon.svg<>res://player.gd
+state.gd::GDScript::-1::1698935799::0::1::::State<>Node2D<>::
+wall.tscn::PackedScene::5164638843606843567::1698940296::0::1::::<><>::uid://disn2f10c62kf::::res://icon.svg
+world.tscn::PackedScene::2319276896171792547::1698940381::0::1::::<><>::uid://cilfwp8d73oki::::res://player.tscn<>uid://chg842wl70kuj::::res://bee.tscn<>uid://cft132l84qvi2::::res://wall.tscn

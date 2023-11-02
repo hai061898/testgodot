@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698940836
+icon.svg::CompressedTexture2D::7063899909128416337::1696209166::1696209171::1::::<><>::
+::res://asset/::1696209326
+demo1.png::CompressedTexture2D::9153298520442105059::1696209326::1696209326::1::::<><>::
+grass.png::CompressedTexture2D::7059303979811962746::1696209293::1696209293::1::::<><>::
+objects.png::CompressedTexture2D::8223882405601280112::1696209297::1696209297::1::::<><>::
+plains.png::CompressedTexture2D::6372500096348211602::1696209311::1696209311::1::::<><>::
+::res://scenes/::1698940750
+player.tscn::PackedScene::347484580144674782::1698940750::0::1::::<><>::uid://d3n6qvwfkhlyp::::res://asset/demo1.png<>res://scripts/player.gd
+world.tscn::PackedScene::1920495092059554351::1698940750::0::1::::<><>::uid://c7ttx8gao3twc::::res://asset/grass.png<>uid://dpfye22hpxgps::::res://asset/objects.png<>uid://e7laxotk62du::::res://scenes/player.tscn
+::res://scripts/::1696310747
+player.gd::GDScript::-1::1696310747::0::1::::<>CharacterBody2D<>::
